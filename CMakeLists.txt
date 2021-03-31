@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.17)
 project(conan-test)
 
 set(CMAKE_MODULE_PATH 
-    ${CMAKE_SOURCE_DIR}/cmake/Scripts 
-    ${CMAKE_CURRENT_LIST_DIR}/cmake/Modules 
+    ${CMAKE_CURRENT_LIST_DIR}/cmake/Scripts
+    ${CMAKE_CURRENT_LIST_DIR}/cmake/Modules
     ${CMAKE_MODULE_PATH}
 )
 
@@ -25,10 +25,6 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/bin)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
-
-add_library(math src/Math/Factorial.cpp)
-target_include_directories(math PUBLIC include)
-set_target_properties(math PROPERTIES PUBLIC_HEADER include/Math/Factorial.hpp)
 
 install(
     TARGETS         math
