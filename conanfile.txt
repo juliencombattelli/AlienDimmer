@@ -1,0 +1,15 @@
+[requires]
+spdlog/1.8.0
+gtest/1.10.0
+
+[generators]
+cmake_find_package
+cmake_paths
+virtualenv
+
+[options]
+
+[imports]
+bin, *.dll -> ./bin
+lib, *.dylib* -> ./bin
+lib, *.so* -> ./bin

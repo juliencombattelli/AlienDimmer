@@ -1,0 +1,14 @@
+{
+    "editor.formatOnSave": true,
+    "workbench.tree.indent": 16,
+    "editor.detectIndentation": false,
+    "files.associations": {
+        "*.tcc": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "vector": "cpp",
+        "system_error": "cpp"
+    }
+}
