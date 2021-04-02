@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.17)
-project(conan-test)
+project(AlienDimmer)
 
 set(CMAKE_MODULE_PATH 
     ${CMAKE_CURRENT_LIST_DIR}/cmake/Scripts
@@ -18,6 +18,6 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 find_package(AlienFX REQUIRED)
 
-if(ENABLE_TESTING)
-    add_subdirectory(test)
-endif()
+add_executable(aliendimmer src/main.cpp)
+target_link_libraries(aliendimmer PRIVATE AlienFX::AlienFX)
+target_enable_sanitizers(aliendimmer)
