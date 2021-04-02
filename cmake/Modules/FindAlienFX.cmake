@@ -1,7 +1,10 @@
 if(CMAKE_HOST_WIN32)
+    set(AWCC_INSTALL_PATH_REGISTRY_KEY "[HKEY_LOCAL_MACHINE\\SOFTWARE\\Alienware\\Alienware Command Center;InstallPath]")
+    get_filename_component(AlienFX_SDK_ROOT_PATH  "${AWCC_INSTALL_PATH_REGISTRY_KEY}\\AlienFX SDK" ABSOLUTE CACHE)
     find_path(AlienFX_INCLUDE_DIR
         NAMES LFX2.h
-        PATHS "[HKEY_LOCAL_MACHINE\\SOFTWARE\\Alienware\\Alienware Command Center;InstallPath]\\AlienFX SDK\\includes"
+        PATHS "${AlienFX_SDK_ROOT_PATH}"
+        PATH_SUFFIXES "includes"
         DOC "The AlienFX SDK include directory"
         NO_DEFAULT_PATH
     )
